@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVATEX — Futuristic AI Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <canvas id="neuralGrid"></canvas>
+        <div class="particles-container" id="particlesContainer"></div>
+        <div class="holographic-waves"></div>
+        <div class="scan-lines"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 40 40" class="logo-icon">
+                    <circle cx="20" cy="20" r="15" class="logo-ring" />
+                    <circle cx="20" cy="20" r="10" class="logo-ring" />
+                    <path d="M12 12 L20 20 L28 12" class="logo-x" />
+                    <path d="M12 28 L20 20 L28 28" class="logo-x" />
+                </svg>
+                <span class="logo-text">ELEVATEX</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#ai-chatbot" class="nav-link">AI Chatbot</a>
+                <a href="#automations" class="nav-link">Automations</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="login.html" class="nav-link nav-cta">Login</a>
+                <a href="signup.html" class="nav-link nav-btn">Sign Up</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">AI Automation</span>
+                        <span class="title-line accent">That Runs Your Business</span>
+                        <span class="title-line">While You Grow It</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        We design intelligent systems that capture leads, respond instantly, and streamline operations —
+                        so you save time, reduce costs, and scale faster.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#contact" class="cta-primary">
+                            <span class="cta-text">Get Free AI Consultation</span>
+                            <span class="cta-glow"></span>
+                        </a>
+                        <a href="#services" class="cta-secondary">
+                            <span class="cta-icon">▶</span>
+                            <span>Watch Automation Demo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-dashboard">
+                        <div class="dashboard-frame">
+                            <div class="dashboard-header">
+                                <div class="dash-dot"></div>
+                                <div class="dash-dot"></div>
+                                <div class="dash-dot"></div>
+                            </div>
+                            <div class="dashboard-content">
+                                <div class="dash-stats">
+                                    <div class="stat-card">
+                                        <span class="stat-value" data-count="247">0</span>
+                                        <span class="stat-label">Leads Today</span>
+                                        <div class="stat-graph">
+                                            <div class="graph-bar" style="height: 60%"></div>
+                                            <div class="graph-bar" style="height: 80%"></div>
+                                            <div class="graph-bar" style="height: 45%"></div>
+                                            <div class="graph-bar" style="height: 90%"></div>
+                                            <div class="graph-bar" style="height: 70%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <span class="stat-value" data-count="98">0</span>
+                                        <span class="stat-label">% Response Rate</span>
+                                        <div class="stat-ring">
+                                            <svg viewBox="0 0 36 36">
+                                                <circle cx="18" cy="18" r="15" class="ring-bg" />
+                                                <circle cx="18" cy="18" r="15" class="ring-progress"
+                                                    style="stroke-dasharray: 98, 100" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <span class="stat-value" data-count="24">0</span>
+                                        <span class="stat-label">/7 Active</span>
+                                        <div class="pulse-indicator"></div>
+                                    </div>
+                                </div>
+                                <div class="dash-feed">
+                                    <div class="feed-item">
+                                        <span class="feed-dot"></span>
+                                        <span>New lead: Tech Corp</span>
+                                    </div>
+                                    <div class="feed-item">
+                                        <span class="feed-dot"></span>
+                                        <span>Query resolved automatically</span>
+                                    </div>
+                                    <div class="feed-item">
+                                        <span class="feed-dot"></span>
+                                        <span>Appointment scheduled</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="neural-pulse"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Trust & Value Section -->
+        <section class="trust-value" id="trust">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Smarter Systems. <span class="accent">Faster Growth.</span></h2>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card glass-card">
+                        <div class="value-icon">🕐</div>
+                        <h3>24/7 Intelligent Response</h3>
+                        <p>Never miss a lead with round-the-clock AI-powered responses.</p>
+                    </div>
+                    <div class="value-card glass-card">
+                        <div class="value-icon">🧠</div>
+                        <h3>Self-Learning Automation</h3>
+                        <p>AI that improves with every interaction, getting smarter over time.</p>
+                    </div>
+                    <div class="value-card glass-card">
+                        <div class="value-icon">📈</div>
+                        <h3>More Leads Without More Staff</h3>
+                        <p>Scale your lead capture without increasing team size.</p>
+                    </div>
+                    <div class="value-card glass-card">
+                        <div class="value-icon">⚡</div>
+                        <h3>Reduced Operational Workload</h3>
+                        <p>Automate repetitive tasks and focus on growth.</p>
+                    </div>
+                    <div class="value-card glass-card">
+                        <div class="value-icon">✨</div>
+                        <h3>Done-for-You Implementation</h3>
+                        <p>We set everything up so you can focus on your business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Voice & Chat Bot Section -->
+        <section class="ai-chatbot-section" id="ai-chatbot">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Featured Technology</span>
+                    <h2 class="section-title">AI Voice & Chat Bot <span class="accent">Dual-Mode Assistant</span></h2>
+                </div>
+                <div class="chatbot-showcase">
+                    <div class="chatbot-visual">
+                        <div class="chatbot-avatar">
+                            <div class="avatar-ring ring-1"></div>
+                            <div class="avatar-ring ring-2"></div>
+                            <div class="avatar-ring ring-3"></div>
+                            <div class="avatar-core">
+                                <svg viewBox="0 0 60 60" class="avatar-icon">
+                                    <circle cx="30" cy="30" r="20" class="avatar-circle" />
+                                    <circle cx="22" cy="25" r="3" class="eye" />
+                                    <circle cx="38" cy="25" r="3" class="eye" />
+                                    <path d="M20 38 Q30 45 40 38" class="smile" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="chatbot-waves">
+                            <div class="wave wave-1"></div>
+                            <div class="wave wave-2"></div>
+                            <div class="wave wave-3"></div>
+                        </div>
+                    </div>
+                    <div class="chatbot-features glass-card">
+                        <h3>Intelligent Assistant</h3>
+                        <p>Our AI bot communicates with your customers through both voice and text, providing seamless
+                            24/7 support.</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">🎤</span>
+                                <div>
+                                    <strong>Voice Response</strong>
+                                    <p>Natural voice AI that speaks with customers in real-time</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">💬</span>
+                                <div>
+                                    <strong>Text Chat</strong>
+                                    <p>Instant text responses across all digital platforms</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🧠</span>
+                                <div>
+                                    <strong>Self-Learning</strong>
+                                    <p>AI improves from every conversation automatically</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🌐</span>
+                                <div>
+                                    <strong>Multi-Language</strong>
+                                    <p>Speaks 50+ languages fluently</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📞</span>
+                                <div>
+                                    <strong>Call Handling</strong>
+                                    <p>Answers calls, schedules appointments, transfers when needed</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔄</span>
+                                <div>
+                                    <strong>Omnichannel</strong>
+                                    <p>Works on website, WhatsApp, phone, social media</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Automations Section -->
+        <section class="all-automations" id="automations">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Complete Solutions</span>
+                    <h2 class="section-title">All <span class="accent">Automations</span></h2>
+                </div>
+                <div class="automations-grid">
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">📱</div>
+                        <h3>Social Media Automation</h3>
+                        <p>Auto-post, schedule, and engage across all platforms. AI generates content and responds to
+                            comments.</p>
+                        <ul class="automation-list">
+                            <li>Auto-post scheduling</li>
+                            <li>AI content generation</li>
+                            <li>Comment responses</li>
+                            <li>Analytics reports</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">📧</div>
+                        <h3>Email Marketing Automation</h3>
+                        <p>Automated email sequences, newsletters, and follow-ups that nurture leads into customers.</p>
+                        <ul class="automation-list">
+                            <li>Automated sequences</li>
+                            <li>Personalized campaigns</li>
+                            <li>Behavior triggers</li>
+                            <li>A/B testing</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">👥</div>
+                        <h3>CRM Automation</h3>
+                        <p>Smart customer relationship management with automatic updates, follow-ups, and pipeline
+                            tracking.</p>
+                        <ul class="automation-list">
+                            <li>Auto contact updates</li>
+                            <li>Pipeline management</li>
+                            <li>Task reminders</li>
+                            <li>Deal tracking</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">📊</div>
+                        <h3>Data Entry Automation</h3>
+                        <p>Eliminate manual data entry with AI that extracts, organizes, and updates information
+                            automatically.</p>
+                        <ul class="automation-list">
+                            <li>Form processing</li>
+                            <li>Document extraction</li>
+                            <li>Data validation</li>
+                            <li>Auto-updates</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">📅</div>
+                        <h3>Appointment Scheduling</h3>
+                        <p>AI-powered booking system that schedules, reschedules, and sends reminders automatically.</p>
+                        <ul class="automation-list">
+                            <li>Smart availability</li>
+                            <li>Auto reminders</li>
+                            <li>Calendar sync</li>
+                            <li>Timezone handling</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">📈</div>
+                        <h3>Analytics & Reporting</h3>
+                        <p>Real-time business insights with automated reports and predictive analytics.</p>
+                        <ul class="automation-list">
+                            <li>Real-time dashboards</li>
+                            <li>Custom reports</li>
+                            <li>Predictive insights</li>
+                            <li>Trend analysis</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">💳</div>
+                        <h3>Payment Automation</h3>
+                        <p>Automated invoicing, payment processing, and financial reconciliation.</p>
+                        <ul class="automation-list">
+                            <li>Auto invoicing</li>
+                            <li>Payment reminders</li>
+                            <li>Subscription management</li>
+                            <li>Receipt generation</li>
+                        </ul>
+                    </div>
+                    <div class="automation-card glass-card">
+                        <div class="automation-icon">🎯</div>
+                        <h3>Lead Scoring AI</h3>
+                        <p>Intelligent lead qualification that scores and prioritizes prospects automatically.</p>
+                        <ul class="automation-list">
+                            <li>Behavior tracking</li>
+                            <li>Qualification scoring</li>
+                            <li>Priority ranking</li>
+                            <li>Auto-routing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services-overview" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Services</span>
+                    <h2 class="section-title">Powerful AI Solutions <span class="accent">For Your Business</span></h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card glass-card" data-service="chatbot">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M8 12h32v8H8z" class="bot-head" />
+                                <path d="M12 20v16h24V20" class="bot-body" />
+                                <circle cx="16" cy="26" r="2" class="bot-eye" />
+                                <circle cx="32" cy="26" r="2" class="bot-eye" />
+                                <path d="M20 32h8" class="bot-mouth" />
+                                <circle cx="24" cy="8" r="3" class="antenna" />
+                            </svg>
+                        </div>
+                        <h3>Adaptive AI Chatbot</h3>
+                        <p>Learns from conversations and improves responses automatically.</p>
+                        <span class="service-link">Learn more →</span>
+                    </div>
+                    <div class="service-card glass-card" data-service="lead">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="8" class="target-ring" />
+                                <circle cx="24" cy="24" r="4" class="target-center" />
+                                <path d="M24 4v8M24 36v8M4 24h8M36 24h8" class="target-line" />
+                            </svg>
+                        </div>
+                        <h3>Lead Generation & Follow-Up</h3>
+                        <p>Captures and nurtures prospects without manual effort.</p>
+                        <span class="service-link">Learn more →</span>
+                    </div>
+                    <div class="service-card glass-card" data-service="workflow">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <rect x="6" y="6" width="12" height="12" rx="2" />
+                                <rect x="30" y="6" width="12" height="12" rx="2" />
+                                <rect x="18" y="30" width="12" height="12" rx="2" />
+                                <path d="M18 12v12M30 12v12M24 30v-6" class="flow-line" />
+                                <circle cx="24" cy="24" r="3" class="flow-node" />
+                            </svg>
+                        </div>
+                        <h3>Business Workflow Automation</h3>
+                        <p>Removes repetitive tasks across operations.</p>
+                        <span class="service-link">Learn more →</span>
+                    </div>
+                    <div class="service-card glass-card" data-service="support">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M24 4L8 14v12c0 11 7 18 16 20 9-2 16-9 16-20V14L24 4z" class="support-head" />
+                                <path d="M18 28h12M18 32h8" class="support-face" />
+                            </svg>
+                        </div>
+                        <h3>Customer Support Automation</h3>
+                        <p>AI-driven support available anytime.</p>
+                        <span class="service-link">Learn more →</span>
+                    </div>
+                    <div class="service-card glass-card" data-service="custom">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <rect x="6" y="14" width="36" height="20" rx="2" class="chip-bg" />
+                                <rect x="10" y="18" width="8" height="8" class="chip-section" />
+                                <rect x="20" y="18" width="8" height="8" class="chip-section" />
+                                <rect x="30" y="18" width="8" height="8" class="chip-section" />
+                                <rect x="10" y="28" width="8" height="4" class="chip-section" />
+                                <rect x="20" y="28" width="18" height="4" class="chip-section" />
+                            </svg>
+                        </div>
+                        <h3>Custom AI Systems</h3>
+                        <p>Built specifically for your business processes.</p>
+                        <span class="service-link">Learn more →</span>
+                    </div>
+                    <div class="service-card glass-card" data-service="optimization">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M24 6v6M24 36v6M6 24h6M36 24h6" class="opt-arrow" />
+                                <path d="M12 12l4 4M32 32l4 4M12 36l4-4M32 16l4-4" class="opt-corner" />
+                                <circle cx="24" cy="24" r="8" class="opt-ring" />
+                            </svg>
+                        </div>
+                        <h3>Continuous Optimization</h3>
+                        <p>Performance monitoring and improvement.</p>
+                        <span class="service-link">Learn more →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Process</span>
+                    <h2 class="section-title">How It <span class="accent">Works</span></h2>
+                </div>
+                <div class="process-flow">
+                    <div class="process-line">
+                        <div class="energy-pulse"></div>
+                    </div>
+                    <div class="process-steps">
+                        <div class="process-step glass-card">
+                            <div class="step-number">01</div>
+                            <h3>Business Analysis</h3>
+                            <p>We analyze your current operations and identify automation opportunities.</p>
+                        </div>
+                        <div class="process-step glass-card">
+                            <div class="step-number">02</div>
+                            <h3>AI System Design</h3>
+                            <p>Custom AI solutions designed specifically for your business needs.</p>
+                        </div>
+                        <div class="process-step glass-card">
+                            <div class="step-number">03</div>
+                            <h3>Implementation</h3>
+                            <p>Seamless integration with your existing systems and workflows.</p>
+                        </div>
+                        <div class="process-step glass-card">
+                            <div class="step-number">04</div>
+                            <h3>Continuous Learning</h3>
+                            <p>AI improves over time, getting smarter with every interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us" id="why-us">
+            <div class="container">
+                <div class="why-content">
+                    <div class="why-text">
+                        <span class="section-tag">Why ELEVATEX</span>
+                        <h2 class="section-title">Built for Results, <span class="accent">Not Complexity</span></h2>
+                        <ul class="why-list">
+                            <li>
+                                <span class="why-icon">🧠</span>
+                                <div>
+                                    <strong>Self-improving AI systems</strong>
+                                    <p>Machine learning that gets better over time</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="why-icon">⚡</span>
+                                <div>
+                                    <strong>Fast deployment</strong>
+                                    <p>Get up and running in days, not months</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="why-icon">📊</span>
+                                <div>
+                                    <strong>ROI-focused implementation</strong>
+                                    <p>Every feature designed to deliver results</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="why-icon">📈</span>
+                                <div>
+                                    <strong>Scalable automation architecture</strong>
+                                    <p>Grows with your business seamlessly</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="why-icon">🤝</span>
+                                <div>
+                                    <strong>Fully managed service</strong>
+                                    <p>We handle everything so you can focus on growth</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="why-visual">
+                        <div class="floating-nodes">
+                            <div class="node" data-delay="0"></div>
+                            <div class="node" data-delay="1"></div>
+                            <div class="node" data-delay="2"></div>
+                            <div class="node" data-delay="3"></div>
+                            <div class="node" data-delay="4"></div>
+                            <div class="node-connections"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Pricing</span>
+                    <h2 class="section-title">Simple, Transparent <span class="accent">Pricing</span></h2>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card glass-card">
+                        <div class="pricing-header">
+                            <h3>Basic</h3>
+                            <p>Automation starter system</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">1800</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> Basic AI Chatbot</li>
+                            <li><span>✓</span> Lead Capture</li>
+                            <li><span>✓</span> Email Support</li>
+                            <li><span>✓</span> Monthly Reports</li>
+                        </ul>
+                        <a href="#contact" class="pricing-cta">Get Started</a>
+                    </div>
+                    <div class="pricing-card glass-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Standard</h3>
+                            <p>Multi-system automation</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">4000</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> Advanced AI Chatbot</li>
+                            <li><span>✓</span> Lead Generation + Follow-up</li>
+                            <li><span>✓</span> Workflow Automation</li>
+                            <li><span>✓</span> Priority Support</li>
+                            <li><span>✓</span> Weekly Optimization</li>
+                        </ul>
+                        <a href="#contact" class="pricing-cta primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card glass-card">
+                        <div class="pricing-header">
+                            <h3>Premium</h3>
+                            <p>Full AI-driven operations</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">8000</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> Custom AI Systems</li>
+                            <li><span>✓</span> Full Automation Suite</li>
+                            <li><span>✓</span> 24/7 Dedicated Support</li>
+                            <li><span>✓</span> Daily Optimization</li>
+                            <li><span>✓</span> Custom Integrations</li>
+                        </ul>
+                        <a href="#contact" class="pricing-cta">Get Started</a>
+                    </div>
+                </div>
+                <p class="pricing-note">All plans include setup, optimization, support, and system improvement</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <span class="section-tag">About Us</span>
+                        <h2 class="section-title">We Design <span class="accent">Intelligent Automation</span></h2>
+                        <p class="about-description">
+                            We design intelligent automation systems that remove repetitive work, improve customer
+                            interaction, and help businesses grow efficiently.
+                        </p>
+                        <div class="about-mission">
+                            <div class="mission-item">
+                                <span class="mission-label">Mission</span>
+                                <p>Make advanced automation simple and practical</p>
+                            </div>
+                            <div class="mission-item">
+                                <span class="mission-label">Vision</span>
+                                <p>Intelligent systems powering modern businesses</p>
+                            </div>
+                        </div>
+                        <div class="founder-card glass-card">
+                            <div class="founder-image">
+                                <div class="founder-avatar">HP</div>
+                            </div>
+                            <div class="founder-info">
+                                <span class="founder-label">Founder & CEO</span>
+                                <h4>Harshal Panjabrao Wakode</h4>
+                                <p>Pioneer in AI automation solutions with deep expertise in building intelligent
+                                    systems that transform business operations. Committed to making advanced technology
+                                    accessible and practical for businesses of all sizes.</p>
+                                <div class="founder-social">
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">LinkedIn</a>
+                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-graphic">
+                            <div class="graphic-ring ring-1"></div>
+                            <div class="graphic-ring ring-2"></div>
+                            <div class="graphic-ring ring-3"></div>
+                            <div class="graphic-core"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta" id="final-cta">
+            <div class="container">
+                <div class="cta-content glass-card">
+                    <h2>Ready to Automate and Grow?</h2>
+                    <p>Let intelligent systems handle repetitive work while you scale.</p>
+                    <a href="#contact" class="cta-primary large">
+                        <span class="cta-text">Book Free Consultation</span>
+                        <span class="cta-glow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Get Your <span class="accent">Automation Plan</span></h2>
+                </div>
+                <div class="contact-wrapper">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-progress">
+                            <div class="progress-fill" id="formProgress"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone">
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Interested Service</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="chatbot">AI Chatbot</option>
+                                <option value="lead-gen">Lead Generation</option>
+                                <option value="workflow">Workflow Automation</option>
+                                <option value="support">Customer Support</option>
+                                <option value="custom">Custom AI System</option>
+                            </select>
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us about your business..."></textarea>
+                            <span class="input-glow"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Get My Automation Plan</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="info-card glass-card">
+                            <h4>Let's Connect</h4>
+                            <p>Ready to transform your business with AI?</p>
+                            <div class="info-item">
+                                <span class="info-icon">📧</span>
+                                <span>cutxpro1101@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">📱</span>
+                                <span>+91 9209630283</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg viewBox="0 0 40 40" class="logo-icon">
+                            <circle cx="20" cy="20" r="15" class="logo-ring" />
+                            <circle cx="20" cy="20" r="10" class="logo-ring" />
+                            <path d="M12 12 L20 20 L28 12" class="logo-x" />
+                            <path d="M12 28 L20 20 L28 28" class="logo-x" />
+                        </svg>
+                        <span class="logo-text">ELEVATEX</span>
+                    </a>
+                    <p>Intelligent automation for modern businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#services">AI Chatbot</a>
+                        <a href="#services">Lead Generation</a>
+                        <a href="#services">Workflow Automation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ELEVATEX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
