@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initCustomCursor() {
     const cursor = document.getElementById('cursor');
     const trail = document.getElementById('cursorTrail');
+    if (!cursor || !trail) return;
+
     let mouseX = 0, mouseY = 0;
     let trailX = 0, trailY = 0;
 
@@ -235,6 +237,7 @@ function initScrollReveal() {
 
 function initHeader() {
     const header = document.getElementById('header');
+    if (!header) return;
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -407,14 +410,24 @@ function createParticleBurst(x, y) {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (!href || href === '#') {
+            return;
+        }
 
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+        try {
+            const target = document.querySelector(href);
+            if (!target) {
+                return;
+            }
+
+            e.preventDefault();
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
+        } catch (_error) {
+            // Ignore invalid selectors from malformed hash links.
         }
     });
 });
@@ -513,4 +526,3 @@ if (window.innerWidth < 768) {
     document.documentElement.style.setProperty('--transition-medium', '0.2s ease');
     document.documentElement.style.setProperty('--transition-slow', '0.3s ease');
 }
-
