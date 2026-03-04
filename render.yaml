@@ -5,6 +5,9 @@ services:
     plan: starter
     autoDeploy: true
     healthCheckPath: /api/health
+    domains:
+      - www.elevatex.com
+      - elevatex.com
     envVars:
       - key: NODE_ENV
         value: production

@@ -51,6 +51,15 @@ Required deploy settings:
 - After the service is created, fill all `sync: false` environment variables in the Render dashboard.
 - Redeploy once environment variables are set.
 
+### Render (one-command API apply)
+If you have Render API access, you can apply domains + env vars + redeploy automatically:
+- Export:
+  - `RENDER_API_KEY`
+  - `RENDER_SERVICE_ID`
+- Ensure `backend/.env.production` contains real production values.
+- Run:
+  - `./scripts/render_apply_production.sh`
+
 ## 5) Post-deploy verification
 
 After deploy, verify:
