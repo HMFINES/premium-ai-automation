@@ -11,7 +11,7 @@ services:
       - key: PORT
         value: 4000
       - key: FRONTEND_ORIGIN
-        sync: false
+        value: https://www.elevatex.com,https://elevatex.com
       - key: DB_HOST
         sync: false
       - key: DB_PORT
@@ -39,13 +39,13 @@ services:
       - key: GOOGLE_CLIENT_SECRET
         sync: false
       - key: GOOGLE_CALLBACK_URL
-        sync: false
+        value: https://www.elevatex.com/api/auth/google/callback
       - key: GITHUB_CLIENT_ID
         sync: false
       - key: GITHUB_CLIENT_SECRET
         sync: false
       - key: GITHUB_CALLBACK_URL
-        sync: false
+        value: https://www.elevatex.com/api/auth/github/callback
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_MODEL

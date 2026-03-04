@@ -10,7 +10,7 @@ This project is configured for single-origin deployment:
    - `cp backend/.env.production.example backend/.env.production`
 2. Fill real values:
    - DB credentials (`DB_*`)
-   - `FRONTEND_ORIGIN` with your final domain (for example `https://your-domain.com`)
+   - `FRONTEND_ORIGIN` with your final domain (for this setup: `https://www.elevatex.com,https://elevatex.com`)
    - Strong JWT secrets (minimum 32 characters each)
    - OAuth credentials/callbacks if using Google/GitHub login
 
